@@ -6,7 +6,7 @@
       </div>
       <h1 class="personel_name">Dellal Mohamed</h1>
       <p class="track">web developer</p>
-      <hr />
+      <div class="hr"></div>
       <div class="contact">
         <ul class="contact_list">
           <li class="contact_item">
@@ -38,7 +38,6 @@
           </li>
         </ul>
       </div>
-      <hr />
       <div class="social_media_cont">
         <ul class="social_media_list">
           <li>
@@ -61,8 +60,12 @@
   display: flex;
   justify-content: center;
 }
-hr {
+.hr {
+  width: 213px;
+  height: 1px;
   margin: 30px 40px;
+  color: #383838;
+  background-color: blue;
 }
 .side_bare {
   background-color: #2c3e50;

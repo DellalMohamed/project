@@ -1,16 +1,16 @@
 <template>
   <article class="Portfolio">
     <nav class="portfolio_nav">
-      <button>All</button>
+      <button @click="say(projectsData)">All</button>
       <button>Web design</button>
       <button>Applications</button>
       <button>Web development</button>
     </nav>
     <div class="projects_cont">
       <project-content
-        v-for="(project, key) in projectsData"
-        :key="key"
-        :project="project.project_title"
+        v-for="project in projectsData.projects"
+        :key="project"
+        :project="project"
       />
     </div>
   </article>
@@ -21,74 +21,83 @@ import { ref } from "vue";
 export default {
   components: { projectContent },
   setup() {
+    function say(e) {
+      //var ty = e.filter(e.project_category);
+      let outPut = e.projects.filter(
+        (el) => el.project_category === "Web development"
+      );
+      console.log(outPut);
+    }
     const projectsData = ref({
-      project_1: {
-        link: "",
-        project_img: "",
-        project_title: "Finance",
-        project_category: "Web development",
-      },
-      project_2: {
-        link: "",
-        project_img: "",
-        project_title: "Orizon",
-        project_category: "Web development",
-      },
-      project_3: {
-        link: "",
-        project_img: "",
-        project_title: "Fundo",
-        project_category: "Web design",
-      },
-      project_4: {
-        link: "",
-        project_img: "",
-        project_title: "Brawlhalla",
-        project_category: "Applications",
-      },
-      project_5: {
-        link: "",
-        project_img: "",
-        project_title: "DSM",
-        project_category: "Web design",
-      },
-      project_6: {
-        link: "",
-        project_img: "",
-        project_title: "MetaSpark",
-        project_category: "Web design",
-      },
-      project_7: {
-        link: "",
-        project_img: "",
-        project_title: "Summary",
-        project_category: "Web development",
-      },
-      project_8: {
-        link: "",
-        project_img: "",
-        project_title: "Task Manager",
-        project_category: "Applications",
-      },
-      project_9: {
-        link: "",
-        project_img: "",
-        project_title: "Arrival",
-        project_category: "Web development",
-      },
+      projects: [
+        {
+          link: "",
+          project_img: "",
+          project_title: "Finance",
+          project_category: "Web development",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "Orizon",
+          project_category: "Web development",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "Fundo",
+          project_category: "Web design",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "Brawlhalla",
+          project_category: "Applications",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "DSM",
+          project_category: "Web design",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "MetaSpark",
+          project_category: "Web design",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "Summary",
+          project_category: "Web development",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "Task Manager",
+          project_category: "Applications",
+        },
+        {
+          link: "",
+          project_img: "",
+          project_title: "Arrival",
+          project_category: "Web development",
+        },
+      ],
     });
 
     return {
       projectsData,
+      name,
+      say,
     };
   },
 };
 </script>
 <style lang="scss">
 .Portfolio {
-  width: 838px;
-  height: 978px;
-  padding: 30px;
+  width: auto;
   .portfolio_nav {
     margin-top: 30px;
     display: flex;
@@ -113,7 +122,6 @@ export default {
     }
   }
   .projects_cont {
-    background-color: #313131;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

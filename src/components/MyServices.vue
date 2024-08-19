@@ -52,9 +52,10 @@ h1 {
 }
 .services {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   flex-wrap: wrap;
+  gap: 20px 25px;
   width: 838px;
   height: 379px;
   margin-bottom: 21px;

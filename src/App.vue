@@ -9,7 +9,7 @@
         <router-link to="/blog">blog</router-link> |
         <router-link to="/contact">Contact</router-link>
       </nav>
-      <router-view />
+      <router-view class="router_view" />
     </div>
   </div>
 </template>
@@ -29,12 +29,17 @@ export default {
 ul {
   list-style: none;
 }
+.router_view {
+  width: 863px;
+  height: auto;
+  padding: 30px;
+}
 .global_container {
   display: flex;
   justify-content: center;
   gap: 25px;
   max-width: 1200px;
-  height: 1040px;
+  height: auto;
   margin: auto;
   background-color: #313131;
 }

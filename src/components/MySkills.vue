@@ -25,7 +25,6 @@
 </template>
 <style lang="scss">
 .skills {
-  width: 838px;
   height: 341px;
   .skills_title {
     font-family: "Poppins";
@@ -49,7 +48,7 @@
           color: #fafafa;
         }
         progress {
-          width: 778px;
+          width: auto;
           height: 10px;
           border-radius: 10px;
           border: 1px solid gray;

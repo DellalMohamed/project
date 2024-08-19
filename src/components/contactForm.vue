@@ -27,11 +27,10 @@ export default {
 </script>
 <style lang="scss">
 .form_cont {
-  margin: 30px 31px 57px;
   padding-bottom: 30px;
   figure {
     iframe {
-      width: 838px;
+      width: 100%;
       height: 380px;
       border-radius: 18px;
       margin-bottom: 31px;
@@ -59,7 +58,7 @@ export default {
     }
   }
   textarea {
-    width: 838px;
+    width: 100%;
     height: 120px;
     border: 1px solid #808080;
     border-radius: 14px;

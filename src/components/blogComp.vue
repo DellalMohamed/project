@@ -1,85 +1,37 @@
 <template>
-  <div class="blog_template" v-for="blog in blogsData" :key="blog">
-    <div class="img_cont">
-      <img src="../assets/my-avatar.png.svg" alt="" />
-    </div>
-    <div class="blog_info">
-      <div class="blog_meta">
-        <p class="blog_category">{{ blog.blogCategory }}</p>
-        <span></span>
-        <time class="date_time" datetime="2022-02-23">Fab 23, 2022</time>
+  <div class="blog_template">
+    <div>
+      <div class="img_cont">
+        <img src="../assets/project-1.jpg" alt="" />
       </div>
-      <h3 class="blog_title">Design conferences in 2022</h3>
-      <p class="blog_text">
-        Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-      </p>
+      <div class="blog_info">
+        <div class="blog_meta">
+          <p class="blog_category"></p>
+          <span></span>
+          <time class="date_time" datetime="2022-02-23">Fab 23, 2022</time>
+        </div>
+        <h3 class="blog_title">Design conferences in 2022</h3>
+        <p class="blog_text">
+          Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+        </p>
+      </div>
     </div>
   </div>
 </template>
-<script>
-export default {
-  setup() {
-    const blogsData = {
-      blog_1: {
-        img: "",
-        blogCategory: "5hjghjhg",
-        dateTime: "2024-02-28",
-        blogTitle: "kjkjkjkj",
-        blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
-      },
-      blog_2: {
-        img: "",
-        blogCategory: "lkflkll",
-        dateTime: "2024-02-28",
-        blogTitle: "kjkjkjkj",
-        blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
-      },
-      blog_3: {
-        img: "",
-        blogCategory: "lkflkll",
-        dateTime: "2024-02-28",
-        blogTitle: "kjkjkjkj",
-        blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
-      },
-      blog_4: {
-        img: "",
-        blogCategory: "lkflkll",
-        dateTime: "2024-02-28",
-        blogTitle: "kjkjkjkj",
-        blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
-      },
-      blog_5: {
-        img: "",
-        blogCategory: "csdc",
-        dateTime: "2024-02-28",
-        blogTitle: "kjkjkjkj",
-        blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
-      },
-      blog_6: {
-        img: "",
-        blogCategory: "lkfdscsdlkll",
-        dateTime: "2024-02-28",
-        blogTitle: "kjkjkjkj",
-        blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
-      },
-    };
-    return { blogsData };
-  },
-};
-</script>
-
 <style lang="scss">
 .blog_template {
-  width: 404px;
-  height: 402px;
-  border-radius: 16px;
-  background-color: #2668aa;
+  width: 402px;
+  display: inline;
+  box-shadow: 0 0 4px gray;
+  border-radius: 12px;
   .img_cont {
-    width: 404px;
-    height: 230px;
     border-radius: 16px;
     margin-bottom: 26px;
-    border: 1px solid rgb(68, 63, 63);
+    box-shadow: 0 0 4px gray;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
   }
   .blog_info {
     padding: 0 25px 24px;

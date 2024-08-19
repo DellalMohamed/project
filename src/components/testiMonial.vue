@@ -56,7 +56,7 @@ h2 {
   width: 838px;
   display: flex;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: hidden;
   gap: 30px;
   position: relative;
   .testimonial {

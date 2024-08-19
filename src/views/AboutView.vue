@@ -1,8 +1,10 @@
 <template>
-  <info-intro />
-  <my-services />
-  <testi-monial />
-  <clients-comp />
+  <article class="about">
+    <info-intro />
+    <my-services />
+    <testi-monial />
+    <clients-comp />
+  </article>
 </template>
 
 <script>
@@ -20,5 +22,8 @@ export default {
 <style lang="scss">
 * {
   widows: 800px;
+}
+.about {
+  width: 900px;
 }
 </style>

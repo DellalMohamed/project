@@ -39,9 +39,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  width: 898px;
-  padding: 45px;
+  padding: 15px 17px;
   background-color: #383838;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 </style>

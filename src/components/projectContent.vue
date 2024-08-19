@@ -3,25 +3,25 @@
     <a href="">
       <figure>
         <div class="icon_box">
-          <f_icon :icon="['far', 'eye']" style="color: red" />
+          <f_icon :icon="['far', 'eye']" class="icon" />
         </div>
         <div class="img_cont">
-          <img src="../assets/project-1.jpg" alt="" />
+          <img class="proj_img" src="../assets/project-1.jpg" alt="" />
         </div>
       </figure>
     </a>
     <div class="proj_name_category">
-      <h3>Finance</h3>
-      <p>Web development</p>
+      <h3>{{ props.project.project_title }}</h3>
+      <p>{{ props.project.project_category }}</p>
     </div>
   </div>
 </template>
 <script setup>
 import { defineProps } from "vue";
 const props = defineProps({
+  name: String,
   project: String,
 });
-console.log(props.project);
 </script>
 
 <style lang="scss">
@@ -31,7 +31,8 @@ console.log(props.project);
   box-shadow: 0px 0px 3px 1px gray;
   border-radius: 12px;
   &:hover .icon_box {
-    display: block;
+    transform: scale(1.2);
+    transition: 0.2s;
   }
   figure {
     position: relative;
@@ -44,7 +45,12 @@ console.log(props.project);
       top: calc(50% - 22px);
       left: calc(50% - 27px);
       text-align: center;
-      display: none;
+      transform: scale(0);
+      .icon {
+        color: #ffdb70;
+        transform: translate(0px, 13px);
+        z-index: 3;
+      }
     }
     .img_cont {
       width: 259px;
@@ -53,9 +59,17 @@ console.log(props.project);
       border-radius: 16px;
       overflow: hidden;
       margin-bottom: 15px;
-      img {
+      .proj_img {
         width: 100%;
       }
+    }
+  }
+  .proj_name_category {
+    margin-left: 10px;
+    h3 {
+      color: #fafafa;
+      font-size: 15px;
+      line-height: 20px;
     }
   }
 }
