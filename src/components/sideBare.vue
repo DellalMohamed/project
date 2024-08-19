@@ -64,8 +64,7 @@
   width: 213px;
   height: 1px;
   margin: 30px 40px;
-  color: #383838;
-  background-color: blue;
+  background-color: #383838;
 }
 .side_bare {
   background-color: #2c3e50;
