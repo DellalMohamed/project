@@ -1,11 +1,13 @@
 <template>
   <div class="router_container">
     <div class="side_bare">
-      <div class="img_ont">
+      <div class="img_cont">
         <img src="../assets/my-avatar.png.svg" alt="" />
       </div>
-      <h1 class="personel_name">Dellal Mohamed</h1>
-      <p class="track">web developer</p>
+      <div class="info_content">
+        <h1 class="personel_name">Dellal Mohamed</h1>
+        <p class="track">web developer</p>
+      </div>
       <div class="hr"></div>
       <div class="contact">
         <ul class="contact_list">
@@ -72,7 +74,7 @@
   width: 275px;
   height: 760px;
   border-radius: 20px;
-  .img_ont {
+  .img_cont {
     width: 150px;
     height: 147px;
     border-radius: 30px;
@@ -160,6 +162,41 @@
           color: rgb(214, 214, 214, 0.7);
         }
       }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .side_bare {
+    width: 700px;
+    max-height: 180px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    .img_cont {
+      width: 120px;
+      height: 118px;
+    }
+    .contact {
+      display: none;
+    }
+    .info_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      width: 254px;
+      margin-left: 15px;
+      .personel_name {
+        margin: 5px 0;
+      }
+      .track {
+        padding: 5px 18px;
+        margin: 5px 0;
+        width: 124px;
+      }
+    }
+    .social_media_cont {
+      display: none;
     }
   }
 }

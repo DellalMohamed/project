@@ -43,4 +43,12 @@ h2 {
   background-color: #383838;
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  .clients_cont {
+    width: 708px;
+    padding: 30px 60px;
+    overflow-x: scroll;
+    margin-bottom: 100px;
+  }
+}
 </style>

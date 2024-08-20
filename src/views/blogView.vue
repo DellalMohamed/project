@@ -1,14 +1,18 @@
 <template>
+  <h1>Current Route: {{ currentRouteName }}</h1>
   <div class="blog">
     <blog-comp v-for="blog in blogsData" :key="blog" />
   </div>
 </template>
 <script>
 import blogComp from "@/components/blogComp.vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
 export default {
   components: { blogComp },
   setup() {
+    const route = useRoute();
+    const currentRouteName = computed(() => route.name);
     const blogsData = ref({
       blog_1: {
         img: "",
@@ -53,7 +57,7 @@ export default {
         blogText: "kjfkjdfkjdkfjkdjfkdjfkjkj",
       },
     });
-    return { blogsData };
+    return { blogsData, currentRouteName };
   },
 };
 </script>
@@ -65,5 +69,11 @@ export default {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .blog {
+    width: 768px;
+    padding: 30px 30px 80px;
+  }
 }
 </style>

@@ -15,8 +15,17 @@
 </template>
 <script>
 import sideBare from "./components/sideBare.vue";
+import { useRoute } from "vue-router";
+import { computed } from "vue";
 export default {
-  components: { sideBare },
+  components: {
+    sideBare,
+  },
+  setup() {
+    const route = useRoute();
+    const currentRouteName = computed(() => route.name);
+    return { currentRouteName };
+  },
 };
 </script>
 <style lang="scss">
@@ -63,12 +72,27 @@ ul {
   align-items: center;
   gap: 30px;
   border-radius: 0 0 0 20px;
+  z-index: 10;
   a {
     font-weight: bold;
     color: #c9d5e0;
     text-decoration: none;
     &.router-link-exact-active {
       color: #42b983;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .global_container {
+    width: 100%;
+    flex-direction: column;
+    padding: 30px 30px 80px;
+    .nav {
+      position: fixed;
+      bottom: 0;
+      width: 768px;
+      margin: 0;
+      border-radius: 18px 18px 0 0;
     }
   }
 }

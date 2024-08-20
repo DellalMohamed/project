@@ -2,7 +2,7 @@
   <h1>What i'm doing</h1>
   <div class="services">
     <div class="service" v-for="service in services" :key="service">
-      <img src="../assets/logo.png" alt="fgfgf" />
+      <img src="../assets/logo.png" alt="" />
       <div class="service_info">
         <h2>{{ service.service_name }}</h2>
         <p>
@@ -61,12 +61,13 @@ h1 {
   margin-bottom: 21px;
   .service {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
+    gap: 36px;
     width: 404px;
     height: 140px;
     background-color: #2c3e50;
-    padding: 30px 46px 30px 30px;
+    padding: 30px;
     border-radius: 18px;
     img {
       width: 40pw;
@@ -85,6 +86,23 @@ h1 {
       font-size: 15px;
       line-height: 24px;
       color: #d6d6d6;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    max-width: 702px;
+    height: auto;
+    .service {
+      width: 708px;
+      height: 182px;
+      padding: 30px;
+      justify-content: start;
+      img {
+        width: 40px;
+        height: 40px;
+        background-color: #84be84;
+      }
     }
   }
 }

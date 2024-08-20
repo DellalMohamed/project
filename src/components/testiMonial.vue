@@ -7,7 +7,7 @@
       :key="testimonial"
     >
       <div class="img_cont">
-        <img src="../assets/logo.png" alt="" />
+        <img src="../assets/my-avatar.png.svg" alt="" />
       </div>
       <h2 class="testi_name">{{ testimonial.name }}</h2>
       <p>Testimonials</p>
@@ -56,26 +56,24 @@ h2 {
   width: 838px;
   display: flex;
   align-items: center;
-  overflow-x: hidden;
   gap: 30px;
-  position: relative;
+  overflow: hidden;
+  z-index: 1;
   .testimonial {
     min-width: 406px;
-    height: 138px;
-    position: relative;
     background-color: #2c3e50;
     padding: 25px 29px;
     border-radius: 14px;
-    z-index: 2;
+    position: relative;
     .img_cont {
       width: 80px;
       height: 80px;
       border-radius: 20px;
-      position: absolute;
-      top: -30px;
-      left: 30px;
-      z-index: 5;
       background-image: linear-gradient(to right, #3f3f40, #303030);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
       img {
         width: 80px;
         height: 80px;
@@ -86,6 +84,15 @@ h2 {
       font-weight: bold;
       font-size: 18px;
       color: #fafafa;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .testimonial_cont {
+    max-width: 708px;
+    overflow-x: scroll;
+    .testimonial {
+      min-width: 708px;
     }
   }
 }
