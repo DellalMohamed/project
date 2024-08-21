@@ -51,4 +51,20 @@ h2 {
     margin-bottom: 100px;
   }
 }
+@media (max-width: 580px) {
+  .clients_cont {
+    width: 520px;
+    padding: 30px 35px;
+    overflow-x: scroll;
+    margin-bottom: 100px;
+    .img_cont {
+      width: 115px;
+      height: 85px;
+      img {
+        width: 115px;
+        height: 85px;
+      }
+    }
+  }
+}
 </style>

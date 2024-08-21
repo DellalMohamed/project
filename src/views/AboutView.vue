@@ -1,5 +1,5 @@
 <template>
-  <h1>Current Route: {{ currentRouteName }}</h1>
+  <current-route :currentRouteName="currentRouteName" />
   <article class="about">
     <info-intro />
     <my-services />
@@ -8,24 +8,16 @@
   </article>
 </template>
 
-<script>
+<script setup>
 // @ is an alias to /src
 import infoIntro from "@/components/InfoIntro.vue";
 import MyServices from "@/components/MyServices.vue";
 import testiMonial from "@/components/testiMonial.vue";
 import ClientsComp from "@/components/ClientsComp.vue";
-import { useRoute } from "vue-router";
-import { computed } from "vue";
-export default {
-  name: "aboutView",
-  //components: { infoIntro, MyServices, testiMonial, ClientsComp },
-  components: { infoIntro, MyServices, testiMonial, ClientsComp },
-  setup() {
-    const route = useRoute();
-    const currentRouteName = computed(() => route.name);
-    return { currentRouteName };
-  },
-};
+import currentRoute from "@/components/currentRoute.vue";
+import routeMixin from "@/Mixins/routeMixin";
+
+const { currentRouteName } = routeMixin();
 </script>
 <style lang="scss">
 * {
@@ -33,10 +25,16 @@ export default {
 }
 .about {
   width: 900px;
+  padding: 30px;
 }
 @media (max-width: 768px) {
   .about {
     width: 768px;
+  }
+}
+@media (max-width: 580px) {
+  .about {
+    width: 580px;
   }
 }
 </style>

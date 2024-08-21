@@ -1,24 +1,21 @@
 <template>
-  <h1>Current Route: {{ currentRouteName }}</h1>
+  <current-route :currentRouteName="currentRouteName" />
   <div class="contact">
     <contact-form />
   </div>
 </template>
 
-<script>
+<script setup>
 import contactForm from "@/components/contactForm.vue";
-import { useRoute } from "vue-router";
-import { computed } from "vue";
-export default {
-  components: { contactForm },
-  setup() {
-    const route = useRoute();
-    const currentRouteName = computed(() => route.name);
-    return { currentRouteName };
-  },
-};
+import currentRoute from "@/components/currentRoute.vue";
+import routeMixin from "@/Mixins/routeMixin";
+
+const { currentRouteName } = routeMixin();
 </script>
 <style lang="scss">
+.contact {
+  padding: 30px;
+}
 @media (max-width: 768px) {
   .contact {
     padding: 30px 30px 60px;

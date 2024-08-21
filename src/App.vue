@@ -86,7 +86,6 @@ ul {
   .global_container {
     width: 100%;
     flex-direction: column;
-    padding: 30px 30px 80px;
     .nav {
       position: fixed;
       bottom: 0;
@@ -96,4 +95,19 @@ ul {
     }
   }
 }
+@media (max-width: 580px) {
+  .global_container {
+    width: 580px;
+    background-color: #42b983;
+    flex-direction: column;
+    .nav {
+      position: fixed;
+      bottom: 0;
+      width: 580px;
+      margin-left: 0;
+      border-radius: 18px 18px 0 0;
+    }
+  }
+}
+//580 450
 </style>

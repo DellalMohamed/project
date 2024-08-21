@@ -106,4 +106,20 @@ h1 {
     }
   }
 }
+@media (max-width: 580px) {
+  .services {
+    max-width: 520px;
+    height: auto;
+    .service {
+      height: 182px;
+      padding: 30px;
+      justify-content: start;
+      img {
+        width: 40px;
+        height: 40px;
+        background-color: #84be84;
+      }
+    }
+  }
+}
 </style>

@@ -200,4 +200,39 @@
     }
   }
 }
+@media (max-width: 580px) {
+  .side_bare {
+    width: 520px;
+    max-height: 180px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    .img_cont {
+      width: 120px;
+      height: 118px;
+    }
+    .contact {
+      display: none;
+    }
+    .info_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      min-width: 254px;
+      margin-left: 15px;
+      .personel_name {
+        margin: 5px 0;
+      }
+      .track {
+        padding: 5px 18px;
+        margin: 5px 0;
+        width: 124px;
+      }
+    }
+    .social_media_cont {
+      display: none;
+    }
+  }
+}
 </style>

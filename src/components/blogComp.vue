@@ -83,4 +83,9 @@
     width: 339px;
   }
 }
+@media (max-width: 580px) {
+  .blog_template {
+    width: 520px;
+  }
+}
 </style>

@@ -75,13 +75,30 @@ const props = defineProps({
 }
 @media (max-width: 768px) {
   .project_cont {
-    width: 338px;
+    width: 520px;
     a {
       figure {
         .img_cont {
-          width: 338px;
+          width: 520px;
+          height: 380px;
           .proj_img {
-            width: 338px;
+            width: 510px;
+            height: 380px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .project_cont {
+    width: 520px;
+    a {
+      figure {
+        .img_cont {
+          width: 520px;
+          .proj_img {
+            width: 515px;
           }
         }
       }

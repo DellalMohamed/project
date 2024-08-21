@@ -70,10 +70,10 @@ h2 {
       height: 80px;
       border-radius: 20px;
       background-image: linear-gradient(to right, #3f3f40, #303030);
+      z-index: 3;
       position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 2;
+      top: -30px;
+      left: 10px;
       img {
         width: 80px;
         height: 80px;
@@ -93,6 +93,15 @@ h2 {
     overflow-x: scroll;
     .testimonial {
       min-width: 708px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .testimonial_cont {
+    max-width: 520px;
+    overflow-x: scroll;
+    .testimonial {
+      min-width: 520px;
     }
   }
 }
