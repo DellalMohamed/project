@@ -45,7 +45,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 h2 {
   font-family: "Poppins";
   font-size: 24px;
@@ -58,19 +58,19 @@ h2 {
   align-items: center;
   gap: 30px;
   overflow: hidden;
-  z-index: 1;
   .testimonial {
     min-width: 406px;
-    background-color: #2c3e50;
+    background-color: #383838;
     padding: 25px 29px;
     border-radius: 14px;
     position: relative;
+    margin-top: 30px;
+    cursor: pointer;
     .img_cont {
       width: 80px;
       height: 80px;
       border-radius: 20px;
       background-image: linear-gradient(to right, #3f3f40, #303030);
-      z-index: 3;
       position: absolute;
       top: -30px;
       left: 10px;

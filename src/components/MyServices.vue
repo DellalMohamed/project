@@ -66,7 +66,7 @@ h1 {
     gap: 36px;
     width: 404px;
     height: 140px;
-    background-color: #2c3e50;
+    background-color: #383838;
     padding: 30px;
     border-radius: 18px;
     img {

@@ -10,7 +10,7 @@
       </div>
       <div class="hr"></div>
       <div class="contact">
-        <ul class="contact_list">
+        <ul class="contact_list" :style="{ display: display }">
           <li class="contact_item">
             <div class="icon_cont">
               <img src="" alt="" />
@@ -53,11 +53,27 @@
           </li>
         </ul>
       </div>
+      <button class="toggleBTN" @click="toggleDisplay()">
+        <f_icon :icon="['far', 'eye']" class="icon" />
+        btn
+      </button>
     </div>
   </div>
 </template>
+<script setup>
+import { ref } from "vue";
+
+const display = ref("block");
+const toggleDisplay = () => {
+  display.value = display.value === "block" ? "none" : "block";
+  console.log(display.value);
+};
+</script>
 
 <style lang="scss">
+.disBlock {
+  display: block;
+}
 .router_container {
   display: flex;
   justify-content: center;
@@ -66,14 +82,16 @@
   width: 213px;
   height: 1px;
   margin: 30px 40px;
-  background-color: #383838;
+  background-color: #2c3e50;
 }
 .side_bare {
-  background-color: #2c3e50;
+  background-color: #383838;
   padding-top: 60px;
   width: 275px;
   height: 760px;
   border-radius: 20px;
+  position: relative;
+  overflow: hidden;
   .img_cont {
     width: 150px;
     height: 147px;
@@ -100,6 +118,7 @@
   }
   .contact {
     .contact_list {
+      display: block;
       .contact_item {
         width: 213px;
         height: 62px;
@@ -164,6 +183,18 @@
       }
     }
   }
+  .toggleBTN {
+    display: none;
+    background-color: darkcyan;
+    padding: 0 30px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    border: none;
+    border-radius: 0 0 0 30px;
+  }
 }
 @media (max-width: 768px) {
   .side_bare {
@@ -212,7 +243,7 @@
       height: 118px;
     }
     .contact {
-      display: none;
+      display: block;
     }
     .info_content {
       display: flex;
@@ -232,6 +263,9 @@
     }
     .social_media_cont {
       display: none;
+    }
+    .toggleBTN {
+      display: block;
     }
   }
 }

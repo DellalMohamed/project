@@ -3,7 +3,13 @@ import AboutView from "@/views/AboutView.vue";
 import resumeView from "@/views/resumeView.vue";
 import portfolioView from "@/views/portfolioView.vue";
 import blogView from "@/views/blogView.vue";
+import HomeView from "@/views/HomeView.vue";
 const routes = [
+  {
+    path: "/home",
+    name: "home",
+    component: HomeView,
+  },
   {
     path: "/",
     name: "About",

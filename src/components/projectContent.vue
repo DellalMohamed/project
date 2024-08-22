@@ -75,14 +75,14 @@ const props = defineProps({
 }
 @media (max-width: 768px) {
   .project_cont {
-    width: 520px;
+    width: 710px;
     a {
       figure {
         .img_cont {
-          width: 520px;
+          width: 710px;
           height: 380px;
           .proj_img {
-            width: 510px;
+            width: 710px;
             height: 380px;
           }
         }

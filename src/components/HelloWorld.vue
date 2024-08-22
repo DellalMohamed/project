@@ -1,5 +1,18 @@
 <template>
   <div class="hello">
+    <div class="testimonial_cont">
+      <div class="testimonial">
+        <div class="img_cont"></div>
+        <h2 class="testi_name">417</h2>
+        <p>Testimonials</p>
+      </div>
+      <div class="testimonial hj">
+        <div class="img_cont hj"></div>
+        <h2 class="testi_name">417</h2>
+        <p>Testimonials</p>
+      </div>
+    </div>
+    <hr style="margin-top: 100px" />
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -105,6 +118,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.testimonial_cont {
+  background-color: #42b983;
+  width: 700px;
+  height: 200px;
+  position: relative;
+  .testimonial {
+    background-color: #6f00ff;
+    width: 80%;
+    height: 120px;
+    .img_cont {
+      background-color: rgba(245, 245, 220, 0.432);
+      margin-left: 30px;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: -30px;
+    }
+  }
+  .hj {
+    border: 2px solid #a71e06e8;
+  }
+}
 h3 {
   margin: 40px 0 0;
 }

@@ -42,6 +42,7 @@ h2 {
   padding: 15px 17px;
   background-color: #383838;
   overflow-x: hidden;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .clients_cont {
